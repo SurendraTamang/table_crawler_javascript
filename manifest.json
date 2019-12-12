@@ -1,0 +1,19 @@
+{
+    "name": "Scraping Table",
+    "version": "0.001",
+    "description": "This extension is built for scraping the data of table",
+    "manifest_version": 2,
+    "browser_action":{
+        "default_popup":"popup.html"
+
+    },
+    "content_scripts":[
+        {
+            "matches":["<all_urls>"],
+            "js":["content.js"]
+        }
+    ],
+    "permissions": ["tabs"]
+    
+    
+  }
