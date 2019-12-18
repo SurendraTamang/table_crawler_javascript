@@ -1,16 +1,23 @@
 console.log("The content js is created!")
+/* On getting the message from popup js where request is  the the message send from popup js 
+This chrome is going to listen the message
+function has started
+*/
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         console.log(request)
         crawling_start(request)
       
     })
+/* I am using the xpath for crawling the table data 
+the document.evaluate is used. */
 function crawling_start(xpath){
     let input = xpath
-let xpath_input = "//table[@id='"+input+"']"
-let xpath_expression = xpath_input+"//tr";
+let xpath_input_id = "//table[@id='"+input+"']"
+let xpath_input_class = "//table[@class='"+input+"']"
+let xpath_expression = xpath_input_id+"//tr"+"|"+xpath_input_class+"//tr"
 let xpath_result = document.evaluate(xpath_expression,document, null, XPathResult.ANY_TYPE, null)
-
+// I am iterating the each list of the xpath result of tr
 var thisHeading = xpath_result.iterateNext(); 
 var alertText = [];
 var data_list = [];
