@@ -2,7 +2,8 @@ console.log("The content js is created!")
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         console.log(request)
-        crawling_start(request)
+        let result = crawling_start(request)
+        sendResponse(result)
       
     })
 function crawling_start(xpath){
@@ -41,4 +42,5 @@ for (i = 1; i < data_list.length;i++){
     details_list.push(details)
 }
 console.log(details_list)
+return details_list;
 }
