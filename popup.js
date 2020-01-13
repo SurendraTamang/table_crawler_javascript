@@ -15,16 +15,18 @@ params = {active: true, currentWindow: true}
         
         function resp(response){
             console.log(response);
-            var obj = {data:response};
-var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(obj));
+            //var obj = {data:response};
+//var data = "text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(obj));
 // Created to JSON file
-var a = document.createElement('a');
+/*var a = document.createElement('a');
 a.href = 'data:' + data;
 a.download = 'data.json';
 a.innerHTML = 'download JSON';
 
 var container = document.getElementById('get_data');
 container.appendChild(a);
+*/
+document.body.innerHTML = "<h1>" + response + "</h1>"
         }
         }
     

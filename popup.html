@@ -7,14 +7,22 @@
     <title>Table Scraping .</title>
 </head>
 <body>
-	<h1> Enter only the ID/Class of the table </h1>
-    <input type="text" name="input" id="x_path_input">ID/Class Table<br>
-    <input type="text" id="begin">Begin<br>
-    <input type="text" id="sheet_id">Sheet_ID<br>
+    <div id="cont">
+	<h1> Table crawler</h1>
+    ID/Class Table: <input type="text" placeholder="write id or class only" id="x_path_input" list="suggest">
+    <datalist id="suggestions">
+        <option value="demo_table">
+        <option value="demo_table2">
+        
+    </datalist><br>
+    Begin:<input type="text" id="begin" placeholder="cell value of sheet(A2 default)">
+    Sheet_ID:<input type="text" id="sheet_id" placeholder="sheet ID "><br>
 
     <button type="submit" id="xpath_submit">Submit</button> 
-    <button type="submit" id="get_data">Download</button> 
+    <!-- <button type="submit" id="get_data">Download</button> -->
+</div>
     
     <script src="popup.js"></script>
+
 </body>
 </html>

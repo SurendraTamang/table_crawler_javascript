@@ -3,6 +3,8 @@ console.log("The content js is created!")
 This chrome is going to listen the message
 function has started
 */
+
+// Receiving the message 
 chrome.runtime.onMessage.addListener(
     function(request, sender, sendResponse) {
         console.log(request['id'])
@@ -61,5 +63,5 @@ console.log("Sending")
 let json_file = {begin:begin_cell,sheet_id:sheet_ID,data:details_list}
 var myJsonString = JSON.stringify(json_file);
 request.send(myJsonString);
-return details_list;
+return "Thank You"
 }
