@@ -18,6 +18,7 @@ function crawling_start(xpath){
 // For the creation of request
 console.log("request is initilize")
 const request = new XMLHttpRequest();
+# This is the api 
 const base_url = "https://4yxdxb3wpl.execute-api.us-east-1.amazonaws.com/upload/json-upload"
 request.open('POST',base_url,true)
 request.setRequestHeader("Content-Type", "application/json");
