@@ -3,10 +3,6 @@
 document.getElementById("xpath_submit").onclick = sendMessage;
 
 function sendMessage(){
-let msg = document.getElementById("x_path_input").value;
-let begin_sheet = document.getElementById("begin").value;
-let sheet_id = document.getElementById("sheet_id").value;
-let message = {id:msg,begin:begin_sheet,sheet:sheet_id};
 params = {active: true, currentWindow: true}
     chrome.tabs.query(params, send);
     function send(tabs) {
@@ -26,9 +22,4 @@ a.innerHTML = 'download JSON';
 var container = document.getElementById('get_data');
 container.appendChild(a);
 */
-document.body.innerHTML = "<h1>" + response + "</h1>"
         }
-        }
-    
-
-}
